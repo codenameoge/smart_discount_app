@@ -24,6 +24,13 @@ export default function Navbar() {
           <Link to="/login" className="text-primary font-bold flex gap-2">
             Log in <p><FaArrowRight className='bg-primary rounded-full text-white mt-1 text-[18px]'/></p>
           </Link>
+
+          <Link
+            to="/FindDiscount"
+            className="text-primary  px-2 rounded outline"
+          >
+            Find Discount
+          </Link>
           
           <Link
             to="/signup"
@@ -31,6 +38,7 @@ export default function Navbar() {
           >
             Sign Up
           </Link>
+
         </div>
 
         <button
@@ -66,11 +74,11 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                to="/services"
+                to="/FindDiscount"
                 className="text-blue"
                 onClick={toggleMenu}
               >
-                Services
+                Find Discount
               </Link>
             </li>
             <li>
@@ -88,16 +96,7 @@ export default function Navbar() {
                 className="text-blue"
                 onClick={toggleMenu}
               >
-                Pharmacy
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/consultation"
-                className="text-blue"
-                onClick={toggleMenu}
-              >
-                Consultation
+                Partners
               </Link>
             </li>
             <li>
@@ -106,7 +105,7 @@ export default function Navbar() {
                 className="text-blue"
                 onClick={toggleMenu}
               >
-                Support
+                Settings
               </Link>
             </li>
             <li>

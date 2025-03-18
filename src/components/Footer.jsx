@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0544AA] text-white py-8 px-4">
+    <footer className="bg-[#FABc08] text-white py-8 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         
         <div>
-          <h3 className="font-bold text-lg">InstamediRx</h3>
+          <h3 className="font-bold text-lg">Coupon AI</h3>
           <p className="mt-6 text-sm w-2/3">
-            Providing healthcare through technology
+            Providing the Best Shopping Experience
           </p>
         </div>
 
@@ -26,9 +26,6 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/services" className="hover:text-gray-300">Services</Link>
-            </li>
-            <li>
-              <Link to="/pharmacy" className="hover:text-gray-300">Pharmacy</Link>
             </li>
             <li>
               <Link to="/contact" className="hover:text-gray-300">Contact Us</Link>
@@ -86,7 +83,7 @@ const Footer = () => {
       </div>
 
       <div className="mt-8 text-center text-sm text-gray-300">
-        &copy; {new Date().getFullYear()} InstamediRx. All rights reserved.
+        &copy; {new Date().getFullYear()} Coupon AI. All rights reserved.
       </div>
     </footer>
   );

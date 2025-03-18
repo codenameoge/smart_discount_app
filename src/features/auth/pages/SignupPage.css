@@ -1,0 +1,113 @@
+
+
+
+.signup-form {
+    width: 90%;
+    height: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 30px;
+    gap:20px;
+    justify-content:center;
+    align-items:center;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .signup-form h2 {
+    margin-bottom: 10px;
+    color:Blue;
+  }
+  
+  .signup-form p {
+    margin-bottom: 20px;
+  }
+  
+  .signup-form form {
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Increased width */
+    max-width: 600px; /* Optional max width for better responsiveness */
+  }
+  
+  .signup-form input,
+  .signup-form select,
+  .signup-form button {
+    width:200%;
+    height: 30%; /* Increased height */
+    border-radius: 50px; /* More rounded edges */
+    border: 2px solid #ccc; /* Fixed border */
+    padding: 0px 50px; /* Increased padding */
+    font-size: 30px;
+    width: 90%; /* Make inputs expand to full width */
+    margin-bottom: 40px;
+    align-items:center;
+  }
+  
+  .submit button {
+    background-color:rgb(206, 86, 6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .signup-form button:hover {
+    background-color: #e68900; /* Slightly darker on hover */
+  }
+  
+  .submit {
+    background-color:rgb(197, 65, 24);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .social-signup {
+    gap:10px;
+    text-align:center;
+    justify-content:center;
+  }
+  
+  .signupButton:hover {
+    background-color:rgb(39, 37, 36);
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+  }
+  
+  .social-icons button {
+    background: none;
+    border: none;
+    font-size: 15px; /* Adjust size */
+    gap:2px;
+    cursor: pointer;
+    color: inherit; /* Inherit text color */
+    transition: transform 1.2s ease-out;
+  }
+  
+  .social-icons button:hover {
+    transform: scale(1.0); /* Slight zoom effect */
+  }
+  
+  .google-icon {
+    color: #db4437; /* Google Red */
+  }
+  
+  .facebook-icon {
+    color: #3b5998; /* Facebook Blue */
+  }
+  
+  .twitter-icon {
+    color: #1da1f2; /* Twitter Blue */
+  }
+  
+  

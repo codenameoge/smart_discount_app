@@ -1,28 +1,26 @@
+import styles from "./ProductDescription.module.css";
+import { services } from "../content/services";
 
-
-const QuoteSection = () => {
-    return (
-      <div className="relative bg-white p-10 md:p-14  md:w-1/2 mx-auto text-center">
-        
-        <div className="absolute top-[-8px] md:left-[-20px] text-yellow text-8xl font-bold">
-          &ldquo;
-        </div>
-  
-       
-        <p className="md:text-lg text-gray leading-relaxed">
-          InstamediRx is dedicated to connecting patients with trusted medical
-          professionals, ensuring fast, secure, and reliable healthcare services
-          at your fingertips. Whether it’s an initial consultation or ordering
-          medications,we are here to take care of your health.
-        </p>
-  
-     
-        <div className="absolute bottom-[-20px] right-[34px] md:right-[-20px] text-yellow text-8xl font-bold">
-          &rdquo;
-        </div>
+function Services() {
+  console.log('Services component rendered')
+  return (
+    <section className={styles.container}>
+      {/* Left Side - Listed Products */}
+      <div className={styles.left}>
+        {services.map((service, index) => (
+          <div className={styles.card} key={index}>
+            <h2 className={styles.title}>{service.title}</h2>
+            <p className={styles.description}>{service.description}</p>
+          </div>
+        ))}
       </div>
-    );
-  };
-  
-  export default QuoteSection;
-  
+
+      {/* Right Side - Picture */}
+      <div className={styles.right}>
+        <img className={styles.image} src="/images/serviceimage.jpg" alt="Product" />
+      </div>
+    </section>
+  );
+}
+
+export default Services;

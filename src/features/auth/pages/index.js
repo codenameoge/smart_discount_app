@@ -1,11 +1,12 @@
-import AccountType from './AccountType';
-import Signup from './Signup';
-import RegistrationDetails from './RegistrationDetails';
-import Qualifications from './Qualifications';
+import React from 'react';
+import SignupWithBanner  from './Signup';
+import './index.css';
 
-export {
-	Signup,
-	AccountType,
-	RegistrationDetails,
-	Qualifications,
-};
+function App() {
+  return (
+    <div className="app-container">
+      <Signup />
+      <DiscountBanner />
+    </div>
+  );
+}

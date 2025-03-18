@@ -1,0 +1,128 @@
+.home-container {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    background-color:rgb(226, 52, 21);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .special-offer {
+    position: relative;
+    margin-bottom: 20px;
+
+  }
+  
+  .special-offer img {
+    width: 200%;
+    height: 50%;
+    margin-bottom:20px;
+  }
+  
+  .offer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .link-input input {
+    width: 80%;
+    padding: 10px;
+    margin-top:20px;
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .actions button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    gap:20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .scan-button {
+    background-color: #007bff;
+    color: #fff;
+    margin-bottom:30px;
+  }
+  
+  .topup-button {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .balances {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .balance-item {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recent-purchases {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  
+  .purchase-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sale-banner {
+    background-color: #ffc107;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }

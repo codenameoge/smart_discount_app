@@ -1,0 +1,129 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+.div-container {
+    background-color: white;
+    width: 350px; /* Adjust width as needed */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.input, select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background: linear-gradient(to right, #ff9900, #ff6600); /* Orange gradient */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff8000, #e65c00); /* Slightly darker orange gradient on hover */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.div-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.div-social img {
+    width: 30px; /* Adjust icon size as needed */
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.discountBannerContainer{
+    background-color:rgb(226, 52, 21); /* Orange color */
+    color: white;
+    width: 80%; /* Adjust as needed */
+    height:135%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-content-container {
+    text-align: center;
+    margin-top:20px;
+  }
+
+  banner-content-container h2 {
+    margin-top:20px;
+  }
+  
+  .discount-info-container {
+    margin-top: 0px;
+  }
+  
+  discount-info h1 {
+    font-size: 5em;
+    margin-top: 10px;
+  }
+  
+  discount-info h2 {
+    margin: 0;
+  }
+  
+  discount-info button {
+    background-color: white;
+    color: #ff9800;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .discountInfoContainer {
+    background-color: rgb(226, 52, 21);
+    background-image: url("/images/SignUp.png");
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 20%;
+    height: 80%;
+  }

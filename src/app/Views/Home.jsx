@@ -9,8 +9,6 @@ const Home = () => {
       <HeroSection/>
       <QuoteSection/>
       <FeaturedDoctors/>
-     <HomeServices/>
-      <Consultation/>
     </div>
   )
 }

@@ -1,119 +1,75 @@
-import { Link } from 'react-router-dom';
-import Logo from '../../../assets/logo.svg';
-import SideImage from '../../../assets/login/side_image.svg';
+import React, { useEffect, useRef, useState } from 'react';
+import {
+	Form,
+	useNavigate,
+	useParams,
+} from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { useDispatch, useSelector } from 'react-redux';
+import { store } from '../../../app/store';
+import { Back, Button, Card } from '../../../components';
+import ClientImage from '../../../assets/Login.png';
+import BackgroundColor from '../components/BackgroundColor';
+import { FormInput } from '../components/form';
+import styles from './Discountbanner.module.css';
+import './login.css';
 
-import { FaFacebook } from 'react-icons/fa';
-import { FaApple } from 'react-icons/fa';
-import { FcGoogle } from 'react-icons/fc';
+function Signup() {
+  return (
+    <div className="signup-form">
+      <h2>Welcome back</h2>
+      <p>let's make payment easy for you. login here.</p>
+      <button type="sui">Sign in with SUI</button>
+      <form>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button type="submit">Log in</button>
+      </form>
+      <div className="social-signup">
+        <span>Or</span>
+        <div className="social-icons">
+          <a href="#" className="google-icon">
+            <img src="src\assets\tel (1).png" alt="Google" />
+          </a>
+          <a href="#" className="facebook-icon">
+            <img src="src\assets\tel (2).png" alt="Facebook" />
+          </a>
+          <a href="#" className="twitter-icon">
+            <img src="src\assets\twitter.png" alt="Twitter" />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
 
-import {  Button } from '../../../components';
+function DiscountBanner() {
+  return (
+    <div className={styles.discountBannerContainer}>
+      <div className={styles.bannerContentContainer}>
+        <h2>Enter the future of discount payment With AI</h2>
+        <div className={styles.discountInfoContainer}>
+          <h1>50%</h1>
+          <h2>DISCOUNT</h2>
+          <button>NOW!</button>
+          <img 
+            src="src\assets\Login.png" 
+            alt="Discount Offer" 
+            className={styles.discountImage} 
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
 
+function LoginWithBanner() {
+  return (
+    <div className="signup-banner-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Signup />
+      <DiscountBanner />
+    </div>
+  );
+}
 
-const Login = () => {
-	return (
-		<section className='flex justify-center items-center gap-10'>
-			<div className='flex w-full h-full md:w-2/4 flex-col px-3 py-4 md:py-0'>
-				<div className='flex flex-col items-center gap-3'>
-					<img
-						src={Logo}
-						alt='Logo'
-						width={100}
-						height={100}
-					/>
-					<h2 className='font-inria-serif font-bold text-4xl'>Login</h2>
-				</div>
-				<div className='mx-auto w-full max-w-[450px]'>
-					<form className='mt-6 space-y-4 mb-2 px-3'>
-						<div className='flex flex-col gap-2 w-full'>
-							<label
-								htmlFor='email'
-								className='font-inria-serif font-bold ml-2'
-							>
-								Email
-								<span className='text-red-500 ml-1'>*</span>
-							</label>
-							<input
-								type='email'
-								name='email'
-								id='email'
-								placeholder='Enter your email address'
-								required
-								className='border-2 border-blue rounded-2xl py-2 px-3 placeholder:text-sm focus:border-blue-700 focus:outline-none'
-							/>
-						</div>
-						<div className='flex flex-col gap-2 w-full'>
-							<label
-								htmlFor='password'
-								className='font-inria-serif font-bold ml-2'
-							>
-								Password
-								<span className='text-red-500 ml-1'>*</span>
-							</label>
-							<input
-								type='password'
-								name='password'
-								id='password'
-								placeholder='Enter your password'
-								required
-								className='border-2 border-blue rounded-2xl py-2 px-3 placeholder:text-sm focus:outline-none'
-							/>
-						</div>
-						<Link
-							to=''
-							className='w-full pr-2 block text-end text-blue text-sm font-medium'
-						>
-							Forgotten password?
-						</Link>
-						<Button>Login</Button>
-					</form>
-					<div className='flex justify-center items-center px-7 gap-2'>
-						<div className='flex-grow border border-gray-300' />
-						<p className='text-gray-400 text-[14px] text-center'>
-							or login with
-						</p>
-						<div className='flex-grow border border-gray-300' />
-					</div>
-					<div className='flex justify-center items-center space-x-16 my-4'>
-						<FcGoogle size={35} />
-						<FaFacebook
-							size={35}
-							className='text-blue'
-						/>
-						<FaApple
-							size={32}
-							className='invert dark:bg-white rounded-md'
-						/>
-					</div>
-					<p className='font-inter text-xs text-center px-8'>
-						By continuing, you agree to InstamediRX's{' '}
-						<a
-							href=''
-							className='text-blue font-semibold'
-						>
-							Privacy policy and Terms of service
-						</a>
-					</p>
-					<p className='text-center text-xs mt-10 font-inter'>
-						Don't have an account?{' '}
-						<Link
-							to='/signup'
-							className='font-bold text-blue'
-						>
-							Sign up
-						</Link>
-					</p>
-				</div>
-			</div>
-			<div className='login-img hidden md:flex w-2/4'>
-				<img
-					src={SideImage}
-					alt='Side image'
-					width={600}
-					height={600}
-				/>
-			</div>
-		</section>
-	);
-};
-
-export default Login;
+export default LoginWithBanner;

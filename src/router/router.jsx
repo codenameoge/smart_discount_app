@@ -4,10 +4,11 @@ import Layout from "../app/Views/Layout";
 import Home from "../app/Views/Home";
 import Error from "../app/Views/Error"; 
 import AccountType from "../features/auth/pages/AccountType"; 
-import Signup from "../features/auth/pages/Signup"; 
+import SignupWithBanner from "../features/auth/pages/Signup";
+import HomeDashboard from "../features/auth/pages/HomeDashboard"; 
 import RegistrationDetails from "../features/auth/pages/RegistrationDetails"; 
 import EmailVerification from "../features/auth/pages/client/pages/EmailVerification";
-import Login from "../features/auth/pages/Login";
+import LoginWithBanner from "../features/auth/pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -20,20 +21,16 @@ const router = createBrowserRouter([
       },
       {
         path: "login",
-        element: <Login />,
+        element: <LoginWithBanner />,
+      },
+      {
+        path: "FindDiscount",
+        element: <HomeDashboard />,
       },
 
       {
         path: "signup",
-        element: <AccountType />,
-      },
-      {
-        path: "signup/:accountType",
-        element: <Signup />,
-      },
-      {
-        path: "signup/:accountType/registration",
-        element: <RegistrationDetails />,
+        element: <SignupWithBanner />,
       },
       {
         path: "signup/:accountType/verification",
