@@ -18,7 +18,8 @@ const HomeDashboard = () => {
     <div className="home-container">
       <div className="content">
         <div className="special-offer">
-          <img src="src\assets\guts.jpg" alt="Special Offer" /> {/* Replace with your image */}
+        <img src="src/assets/hd.png" alt="Special Offer" width="500" height="150" />
+        {/* Replace with your image */}
           <div className="offer-text">
             <h2>SPECIAL OFFER</h2>
             <p>Order now!</p>
@@ -34,19 +35,32 @@ const HomeDashboard = () => {
           />
         </div>
 
-        <div className="actions">
-          <button className="scan-button">Scan for Discount</button>
-          <button className="topup-button">Top Up Wallet</button>
+        <div className="flex gap-4">
+          <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <img src="src/assets/scan.png" alt="Scan for Discount" className="w-24 h-24 mb-2" />
+            <button className="scan-button px-4 py-2 bg-blue-500 text-white rounded-lg">Scan for Discount</button>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <img src="src/assets/topup.png" alt="Top Up Wallet" className="w-24 h-24 mb-2" />
+            <button className="topup-button px-4 py-2 bg-green-500 text-white rounded-lg">Top Up Wallet</button>
+          </div>
         </div>
 
-        <div className="balances">
-          <div className="balance-item">
-            Reward Balance
+
+
+        <div className="flex gap-4">
+          <div className="bg-white shadow-lg rounded-lg p-4 w-1/2">
+            <div className="text-lg font-semibold">Reward Balance</div>
+            <img src="src/assets/hd.png" alt="Reward Balance" className="mt-2 w-24 h-24" />
           </div>
-          <div className="balance-item">
-            Recent Activity
+
+          <div className="bg-white shadow-lg rounded-lg p-4 w-1/2">
+            <div className="text-lg font-semibold">Recent Activity</div>
+            <img src="src/assets/hd.png" alt="Recent Activity" className="mt-2 w-24 h-24" />
           </div>
         </div>
+
 
         <div className="recent-purchases">
           <h2>Recent Purchases</h2>

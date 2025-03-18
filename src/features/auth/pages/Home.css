@@ -42,11 +42,12 @@
   .special-offer {
     position: relative;
     margin-bottom: 20px;
+    width: fit-content;
 
   }
   
   .special-offer img {
-    width: 200%;
+    width: fit-content;
     height: 50%;
     margin-bottom:20px;
   }

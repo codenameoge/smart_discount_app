@@ -2,7 +2,7 @@
 
 
 .signup-form {
-    width: 100%;
+    width: 70%;
     height: 120%;
     padding: 30px;
     border: 1px solid #ccc;
@@ -48,15 +48,12 @@
   
   .submit button {
     background-color:rgb(206, 86, 6);
-    color: white;
+    color: rgb(141, 45, 45);
     border: none;
     cursor: pointer;
     transition: background 0.3s ease;
   }
 
-  .sui button {
-
-  }
   
   .signup-form button:hover {
     background-color: #e68900; /* Slightly darker on hover */
@@ -64,7 +61,7 @@
   
   .submit {
     background-color:rgb(197, 65, 24);
-    color: white;
+    color: rgb(87, 44, 44);
     border: none;
     padding: 15px 30px;
     font-size: 20px;

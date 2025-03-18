@@ -19,10 +19,24 @@ function Signup() {
     <div className="signup-form">
       <h2>Coupon AI.</h2>
       <p>Welcome to Coupon AI - let's make payment easy for you.</p>
+      <button type="sui" className="flex items-center gap-2 p-2 border rounded-lg bg-blue-500 text-black hover:bg-blue-600">
+        <img src="src/assets/sui.png" alt="SUI Logo" className="w-5 h-5" />
+        Sign up with SUI
+      </button>
+      <p>Don't have a Sui wallet? Create Sui wallet <a href="#" className="text-orange-500 text-3xl mt-2 hover:underline">here</a></p>
       <form>
-        <input type="email" placeholder="Email" />
-        <input type="text" placeholder="Username" />
-        <input type="password" placeholder="Password" />
+          <div className="flex flex-col">
+            <label htmlFor="email" className="text-3xl font-medium text-gray-700">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="username" className="text-3xl font-medium text-gray-700">Username</label>
+            <input type="username" id="email" placeholder="Enter your username" className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <div className="flex flex-col">
+            <label htmlFor="password" className="text-3xl font-medium text-gray-700">Password</label>
+            <input type="password" id="email" placeholder="Enter your password" className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
         <select>
           <option value="">Shopping Preferences</option>
           {/* Add more options as needed */}
