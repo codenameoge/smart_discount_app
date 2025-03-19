@@ -55,7 +55,7 @@ const HomeDashboard = () => {
                 alt="Scan for Discount"
                 className="w-24 h-24 mb-2"
               />
-              <button className="scan-button px-4 py-2 bg-blue-500 text-white rounded-lg">
+              <button className="scan-button px-4 py-2 bg-white-500 text-black rounded-lg">
                 Scan for Discount
               </button>
             </div>
@@ -66,7 +66,7 @@ const HomeDashboard = () => {
                 alt="Top Up Wallet"
                 className="w-24 h-24 mb-2"
               />
-              <button className="topup-button px-4 py-2 bg-green-500 text-white rounded-lg">
+              <button className="topup-button px-4 py-2 bg-white-500 text-black rounded-lg">
                 Top Up Wallet
               </button>
             </div>
@@ -74,24 +74,24 @@ const HomeDashboard = () => {
 
           {/* Reward Balance & Recent Activity in Separate Cards */}
           <div className="flex gap-4">
-            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center mt-10">
               <img
                 src="src/assets/sui.png"
                 alt="Scan for Discount"
                 className="w-24 h-24 mb-2"
               />
-              <button className="scan-button px-4 py-2 bg-blue-500 text-white rounded-lg">
+              <button className="scan-button px-4 py-2 bg-white-500 text-black rounded-lg mt-10">
                 Reward Balance
               </button>
             </div>
 
-            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center margin_top-20">
+            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center mt-10">
               <img
                 src="src/assets/sui.png"
                 alt="Top Up Wallet"
                 className="w-24 h-24 mb-2"
               />
-              <button className="topup-button px-4 py-2 bg-green-500 text-white rounded-lg">
+              <button className="topup-button px-4 py-2 bg-white-500 text-black rounded-lg mt-10">
                 Recent Activity
               </button>
             </div>
@@ -99,7 +99,17 @@ const HomeDashboard = () => {
         </div>
 
         {/* Third Section */}
-        <div className="recent-purchases bg-cover bg-center" style={{ backgroundImage: "url('src/assets/sale.png')", height: "400px", width:"100%", justifyContent:"fit" }}>
+        <div
+            className="recent-purchases bg-cover bg-center text-white flex justify-center items-center flex-col"
+            style={{
+              backgroundImage: "url('src/assets/sale.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              height: "400px",
+              width: "100%",
+            }}
+          >
           <h2>Recent Purchases</h2>
           {recentPurchases.length > 0 ? (
             recentPurchases.map((purchase, index) => (
@@ -115,7 +125,7 @@ const HomeDashboard = () => {
               </div>
             ))
           ) : (
-            <p>No recent purchases available.</p>
+            <p c>No recent purchases available.</p>
           )}
         </div>
       </div>
