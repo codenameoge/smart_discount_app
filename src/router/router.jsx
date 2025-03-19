@@ -9,6 +9,7 @@ import DiscountPage from "../features/auth/pages/DiscountPage";
 import HomeDashboard from "../features/auth/pages/HomeDashboard"; 
 import OTPVerification from "../features/auth/pages/OtpPage";
 import VerificationModal from "../features/auth/pages/OtpVerifiedPage"; // New confirmation page
+import DiscountFinder from "../features/auth/pages/ScanDiscountPage";
 import RegistrationDetails from "../features/auth/pages/RegistrationDetails"; 
 import EmailVerification from "../features/auth/pages/client/pages/EmailVerification";
 import LoginWithBanner from "../features/auth/pages/Login";

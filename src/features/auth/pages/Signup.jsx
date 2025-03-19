@@ -80,13 +80,6 @@ const Signup = () => {
             </div>
 
             <div>
-              <label className="block text-gray-700">Shopping Preferences</label>
-              <select className="w-full p-2 border rounded-md">
-                <option value="">Select an option</option>
-                <option value="electronics">Electronics</option>
-                <option value="fashion">Fashion</option>
-                <option value="groceries">Groceries</option>
-              </select>
               <button className="flex items-center justify-center gap-2 w-full p-2 border rounded-lg bg-orange-500 text-white hover:bg-blue-600 mb-4 mt-10">
                 Sign up
               </button>
@@ -109,7 +102,7 @@ const Signup = () => {
             <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
               NOW!
             </button>
-            <img src="src/assets/SignUP.png" alt="Discount Offer" className="w-100 h-90 mt-4" />
+            <img src="src/assets/signup2.png" alt="Discount Offer" className="w-100 h-90 mt-4" />
           </div>
         </div>
       </div>
