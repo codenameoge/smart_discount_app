@@ -1,93 +1,120 @@
-import React, { useEffect, useRef, useState } from 'react';
-import {
-	Form,
-	useNavigate,
-	useParams,
-} from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-import { useDispatch, useSelector } from 'react-redux';
-import { store } from '../../../app/store';
-import { Back, Button, Card } from '../../../components';
-import ClientImage from '../../../assets/SignUp.png';
-import BackgroundColor from '../components/BackgroundColor';
-import { FormInput } from '../components/form';
-import styles from './Discountbanner.module.css';
-import './SignupPage.css';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function Signup() {
+const Signup = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    email: '',
+    username: '',
+    password: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Basic validation before redirecting
+    if (formData.email && formData.username && formData.password) {
+      navigate("/otp-verification", { state: { email: formData.email } });
+    }
+  };
+
   return (
-    <div className="signup-form">
-      <h2>Coupon AI.</h2>
-      <p>Welcome to Coupon AI - let's make payment easy for you.</p>
-      <button type="sui" className="flex items-center gap-2 p-2 border rounded-lg bg-blue-500 text-black hover:bg-blue-600">
-        <img src="src/assets/sui.png" alt="SUI Logo" className="w-5 h-5" />
-        Sign up with SUI
-      </button>
-      <p>Don't have a Sui wallet? Create Sui wallet <a href="#" className="text-orange-500 text-3xl mt-2 hover:underline">here</a></p>
-      <form>
-          <div className="flex flex-col font-weight-700">
-            <label htmlFor="email" className="text-3xl font-medium text-gray-700">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 p-6">
+      <div className="grid grid-cols-2 gap-6 w-full max-w-4xl bg-white rounded-lg shadow-md p-6">
+        {/* Signup Section */}
+        <div className="flex flex-col justify-center">
+          <h2 className="text-2xl font-semibold text-center mb-4">Coupon AI</h2>
+          <p className="text-center text-gray-600 mb-6">Welcome to Coupon AI - let's make payment easy for you.</p>
+
+          <button className="flex items-center justify-center gap-2 w-full p-2 border rounded-lg bg-orange-500 text-white hover:bg-blue-600 mb-4">
+            <img src="src/assets/sui.png" alt="SUI Logo" className="w-5 h-5" />
+            Sign up with SUI
+          </button>
+
+          <p className="text-center text-sm text-gray-600 mb-6">
+            Don't have a Sui wallet? Create Sui wallet
+            <a href="#" className="text-orange-500 text-lg ml-1 hover:underline">here</a>
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-gray-700">Email</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-gray-700">Username</label>
+              <input
+                type="text"
+                name="username"
+                placeholder="Enter your username"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                value={formData.username}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-gray-700">Password</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-gray-700">Shopping Preferences</label>
+              <select className="w-full p-2 border rounded-md">
+                <option value="">Select an option</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="groceries">Groceries</option>
+              </select>
+              <button className="flex items-center justify-center gap-2 w-full p-2 border rounded-lg bg-orange-500 text-white hover:bg-blue-600 mb-4 mt-10">
+                Sign up
+              </button>
+            </div>
+            <div className="text-center mt-4 text-gray-600">Or sign up with:</div>
+            <div className="flex justify-center gap-4 mt-3">
+              <a href="#" className="w-10 h-10"><img src="src/assets/google.png" alt="Google" /></a>
+              <a href="#" className="w-10 h-10"><img src="src/assets/facebook.png" alt="Facebook" /></a>
+              <a href="#" className="w-10 h-10"><img src="src/assets/twitter.png" alt="Twitter" /></a>
+            </div>
+
+           
+          </form>
+        </div>
+
+        {/* Discount Banner Section */}
+        <div className="flex flex-col justify-center items-center bg-orange-500 p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold text-center">Enter the Future of Discount Payment with AI</h2>
+          <div className="flex flex-col items-center mt-4">
+            <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">
+              NOW!
+            </button>
+            <img src="src/assets/SignUP.png" alt="Discount Offer" className="w-100 h-90 mt-4" />
           </div>
-          <div className="flex flex-col">
-            <label htmlFor="username" className="text-3xl font-medium text-gray-700">Username</label>
-            <input type="username" id="email" placeholder="Enter your username" className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          </div>
-          <div className="flex flex-col">
-            <label htmlFor="password" className="text-3xl font-medium text-gray-700">Password</label>
-            <input type="password" id="email" placeholder="Enter your password" className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
-          </div>
-        <select>
-          <option value="">Shopping Preferences</option>
-          {/* Add more options as needed */}
-        </select>
-        <button type="submit">Sign Up</button>
-      </form>
-      <div className="social-signup">
-        <span>Or</span>
-        <div className="social-icons">
-          <a href="#" className="google-icon">
-            <img src="src\assets\tel (1).png" alt="Google" />
-          </a>
-          <a href="#" className="facebook-icon">
-            <img src="src\assets\tel (2).png" alt="Facebook" />
-          </a>
-          <a href="#" className="twitter-icon">
-            <img src="src\assets\twitter.png" alt="Twitter" />
-          </a>
         </div>
       </div>
     </div>
   );
-}
+};
 
-function DiscountBanner() {
-  return (
-    <div className={styles.discountBannerContainer}>
-      <div className={styles.bannerContentContainer}>
-        <h2>Enter the future of discount payment With AI</h2>
-        <div className={styles.discountInfoContainer}>
-          <h1>50%</h1>
-          <h2>DISCOUNT</h2>
-          <button>NOW!</button>
-          <img 
-            src="src\assets\SignUP.png" 
-            alt="Discount Offer" 
-            className={styles.discountImage} 
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SignupWithBanner() {
-  return (
-    <div className="signup-banner-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <Signup />
-      <DiscountBanner />
-    </div>
-  );
-}
-
-export default SignupWithBanner;
+export default Signup;
