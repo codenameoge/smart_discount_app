@@ -25,7 +25,7 @@ function Signup() {
       </button>
       <p>Don't have a Sui wallet? Create Sui wallet <a href="#" className="text-orange-500 text-3xl mt-2 hover:underline">here</a></p>
       <form>
-          <div className="flex flex-col">
+          <div className="flex flex-col font-weight-700">
             <label htmlFor="email" className="text-3xl font-medium text-gray-700">Email</label>
             <input type="email" id="email" placeholder="Enter your email" className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
