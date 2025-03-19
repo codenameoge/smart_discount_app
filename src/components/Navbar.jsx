@@ -21,22 +21,30 @@ export default function Navbar() {
 
         <div className='flex gap-8'>
         <div className="hidden lg:flex items-center space-x-8">
-          <Link to="/login" className="text-primary font-bold flex gap-2">
-            Log in <p><FaArrowRight className='bg-primary rounded-full text-white mt-1 text-[18px]'/></p>
+
+          <Link
+            to="/"
+            className="text-primary font-bold flex gap-2"
+          >
+            Home
           </Link>
 
           <Link
-            to="/FindDiscount"
-            className="text-primary  px-2 rounded outline"
+            to="/"
+            className="text-primary font-bold flex gap-2"
           >
-            Find Discount
+            Products
           </Link>
           
+          <Link to="/login" className="text-primary font-bold flex gap-2">
+            Sign in 
+          </Link>
+
           <Link
             to="/signup"
-            className="text-primary  px-2 rounded outline"
+            className="text-black  px-2 rounded outline bg-orange"
           >
-            Sign Up
+            Get Started
           </Link>
 
         </div>
