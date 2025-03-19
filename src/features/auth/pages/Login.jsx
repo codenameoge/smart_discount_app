@@ -27,7 +27,7 @@ function Signup() {
       <form>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col">
-            <label htmlFor="email" className="text-3xl font-medium text-gray-700">Email</label>
+            <label htmlFor="email" className="text-3xl font-medium fontFamily: 'Arial, sans-serif' text-gray-700">Email</label>
             <input type="email" id="email" placeholder="Enter your email" className="p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
           </div>
 

@@ -5,6 +5,7 @@ import Home from "../app/Views/Home";
 import Error from "../app/Views/Error"; 
 import AccountType from "../features/auth/pages/AccountType"; 
 import SignupWithBanner from "../features/auth/pages/Signup";
+import CheckoutPage from "../features/auth/pages/CheckoutPage";
 import HomeDashboard from "../features/auth/pages/HomeDashboard"; 
 import RegistrationDetails from "../features/auth/pages/RegistrationDetails"; 
 import EmailVerification from "../features/auth/pages/client/pages/EmailVerification";
@@ -30,8 +31,9 @@ const router = createBrowserRouter([
 
       {
         path: "signup",
-        element: <SignupWithBanner />,
+        element: <CheckoutPage />,
       },
+    
       {
         path: "signup/:accountType/verification",
         element: <EmailVerification />,
