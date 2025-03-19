@@ -26,8 +26,8 @@ const LoginWithBanner = () => {
       <div className="grid grid-cols-2 gap-6 w-full max-w-4xl bg-white rounded-lg shadow-md p-6">
         {/* Signup Section */}
         <div className="flex flex-col justify-center">
-          <h2 className="text-2xl font-semibold text-center mb-4">Coupon AI</h2>
-          <p className="text-center text-gray-600 mb-6">Welcome to Coupon AI - let's make payment easy for you.</p>
+          <h2 className="text-2xl font-semibold text-black text-center mb-4">Welcome back</h2>
+          <p className="text-center font-bold text-gray-600 mb-6">Let's Make payment easy for you, please enter your account details</p>
 
           <button className="flex items-center justify-center gap-2 w-full p-2 border rounded-lg bg-grey-500 text-black hover:bg-orange-600 mb-4">
             <img src="src/assets/sui.png" alt="SUI Logo" className="w-5 h-5" />
@@ -61,7 +61,7 @@ const LoginWithBanner = () => {
                 onChange={handleChange}
                 required
               />
-               <button className="flex items-center justify-center gap-2 w-full p-2 border rounded-lg bg-orange-500 text-white hover:bg-blue-600 mb-4 mt-10">
+               <button className="flex items-center justify-center gap-2 w-full p-2 border rounded-lg bg-orange-500 text-white hover:bg-orange-900 mb-4 mt-10">
                 Sign up
               </button>
               <p className="text-center text-sm text-gray-600 mb-6">

@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         element: <SignupWithBanner />,
       },
       {
-        path: "signup/otp-verification",
+        path: "otp-verification",
         element: <OTPVerification />,
       },
       {

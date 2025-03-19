@@ -13,7 +13,7 @@ const OTPVerification = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center bg-grey justify-center min-h-screen">
       <h2 className="text-2xl font-semibold">Verify Your Email</h2>
       <p className="text-gray-600">We've sent an OTP to {email}</p>
       <input
@@ -25,7 +25,7 @@ const OTPVerification = () => {
       />
       <button
         onClick={handleVerify}
-        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+        className="mt-4 px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-blue-600"
       >
         Verify OTP
       </button>
