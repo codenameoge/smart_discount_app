@@ -9,6 +9,7 @@ const OTPVerification = () => {
   
   const [otp, setOtp] = useState("");
   const [timer, setTimer] = useState(600); // 10 minutes in seconds
+  const [notification, setNotification] = useState("");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,6 +27,10 @@ const OTPVerification = () => {
 
   const handleVerify = () => {
     console.log("Verifying OTP:", otp);
+    setNotification("OTP Verified Successfully!");
+    setTimeout(() => {
+      navigate("/otp-verified"); // Navigate to OtpverifiedPage.jsx
+    }, 2000);
   };
 
   const handleResend = () => {
@@ -62,6 +67,7 @@ const OTPVerification = () => {
           Verify OTP
         </button>
         <p className="text-gray-600 text-center mt-2">OTP expires in: {formatTime(timer)}</p>
+        {notification && <p className="text-green-600 text-center mt-4">{notification}</p>}
       </div>
     </div>
   );

@@ -34,22 +34,13 @@ function VerificationModal() {
             </svg>
           </button>
         </div>
-        <h2 className="text-2xl font-semibold mb-4 text-center">Resend Verification Code</h2>
+        <h2 className="text-xl text-black font-semibold mb-4 text-center">Account Verification</h2>
         <p className="text-gray-600 text-center mb-6">
-          We just sent an email with a new verification code to email@gmail.com
+          Your account has been Verified
         </p>
         <div className="flex justify-center space-x-4">
-          <button className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold py-2 px-6 rounded-full hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400">
-            Got it
-          </button>
-          <button
-            className={`border border-yellow-500 text-yellow-500 font-semibold py-2 px-6 rounded-full hover:bg-yellow-100 focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
-              resendClicked ? 'opacity-50 cursor-not-allowed' : ''
-            }`}
-            onClick={handleResend}
-            disabled={resendClicked}
-          >
-            {resendClicked ? 'Sending...' : 'Send again'}
+          <button className="flex items-center justify-center gap-2 w-58 p-2 border rounded-lg bg-orange-500 text-white hover:bg-orange-900 mb-4 ml-4">
+            Continue
           </button>
         </div>
       </div>

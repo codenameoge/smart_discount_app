@@ -13,6 +13,10 @@ import DiscountFinder from "../features/auth/pages/ScanDiscountPage";
 import RegistrationDetails from "../features/auth/pages/RegistrationDetails"; 
 import EmailVerification from "../features/auth/pages/client/pages/EmailVerification";
 import LoginWithBanner from "../features/auth/pages/Login";
+import PasswordReset from "../features/auth/pages/PasswordReset";
+import ResetPassword from "../features/auth/pages/ResetPassword";
+import PasswordResetSuccess from "../features/auth/pages/PasswordResetSuccess";
+import ForgotPassword from "../features/auth/pages/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -31,21 +35,34 @@ const router = createBrowserRouter([
         path: "FindDiscount",
         element: <HomeDashboard />,
       },
+
       {
         path: "signup",
         element: <SignupWithBanner />,
+      },
+      {
+        path: "new-password",
+        element: <ResetPassword />,
+      },
+      {
+        path: "password-reset-success",
+        element: <PasswordResetSuccess />,
       },
       {
         path: "otp-verification",
         element: <OTPVerification />,
       },
       {
+        path: "password-reset",
+        element: <PasswordReset />,
+      },
+      {
         path: "otp-verified",
         element: <VerificationModal />,
       },
       {
-        path: "user-dashboard",
-        element: <HomeDashboard />,
+        path: "reset-password",
+        element: <ForgotPassword />,
       },
       {
         path: "signup/:accountType/verification",

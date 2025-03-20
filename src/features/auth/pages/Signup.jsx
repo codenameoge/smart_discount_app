@@ -26,7 +26,7 @@ const Signup = () => {
       <div className="grid grid-cols-2 gap-6 w-full max-w-4xl bg-white rounded-lg shadow-md p-6">
         {/* Signup Section */}
         <div className="flex flex-col justify-center">
-          <h2 className="text-2xl font-semibold text-center mb-4">Coupon AI</h2>
+          <h2 className="text-2xl text-black font-semibold text-center mb-4">Get Started</h2>
           <p className="text-center text-gray-600 mb-6">Welcome to Coupon AI - let's make payment easy for you.</p>
 
           <button className="flex items-center justify-center gap-2 w-full p-2 border rounded-lg bg-orange-500 text-white hover:bg-blue-600 mb-4">
@@ -83,12 +83,21 @@ const Signup = () => {
               <button className="flex items-center justify-center gap-2 w-full p-2 border rounded-lg bg-orange-500 text-white hover:bg-blue-600 mb-4 mt-10">
                 Sign up
               </button>
+              <p className="text-center text-sm text-gray-600 mb-6">
+              Already have an account?
+              <button
+                onClick={() => navigate("/login")}
+                className="text-orange-500 text-lg ml-1 hover:underline"
+              >
+                Login
+              </button>
+            </p>
             </div>
-            <div className="text-center mt-4 text-gray-600">Or sign up with:</div>
+            
             <div className="flex justify-center gap-4 mt-3">
-              <a href="#" className="w-10 h-10"><img src="src/assets/google.png" alt="Google" /></a>
-              <a href="#" className="w-10 h-10"><img src="src/assets/facebook.png" alt="Facebook" /></a>
-              <a href="#" className="w-10 h-10"><img src="src/assets/twitter.png" alt="Twitter" /></a>
+            <p className="text-center text-sm text-gray-600 mb-6">
+              By continuing you agree to our Terms of Service and Privacy Policy
+            </p>
             </div>
 
            
