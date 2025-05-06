@@ -1,14 +1,15 @@
 import HeroSection from "../../components/HeroSection"
 import QuoteSection from "../../components/QuoteSection"
-import FeaturedDoctors from "../../components/FeaturedDoctors"
+import NewsletterSignup from "../../components/FeaturedDoctors"
 import HomeServices from "../../components/HomeServices"
-import Consultation from "../../components/Consultaion"
+import SaveSmarterSection from "../../components/SaveSmarterSection"
 const Home = () => {
   return (
     <div>
       <HeroSection/>
       <QuoteSection/>
-      <FeaturedDoctors/>
+      <SaveSmarterSection/>
+      <NewsletterSignup/>
     </div>
   )
 }
